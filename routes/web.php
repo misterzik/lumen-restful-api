@@ -22,3 +22,7 @@ $app->post('product','ProductController@createProduct');
 $app->post('product/{id}','ProductController@updateProduct');
       
 $app->delete('product/{id}','ProductController@deleteProduct');
+
+$app->post('oauth/access_token', function() {
+    return response()->json(Authorizer::issueAccessToken());
+});

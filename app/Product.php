@@ -4,5 +4,5 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     public $fillable = ['name','details'];
-public $timestamps = false;
+//public $timestamps = false;
 }

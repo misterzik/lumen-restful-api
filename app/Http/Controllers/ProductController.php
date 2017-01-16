@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Product;
 class ProductController extends Controller
 {
+     public function __construct(){
+    $this->middleware('oauth');
+  }
     public function index(Request $request)
     {
         $products = Product::all();
@@ -40,4 +43,3 @@ class ProductController extends Controller
    
 }
 ?>
-0
